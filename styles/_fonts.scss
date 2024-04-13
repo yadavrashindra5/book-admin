@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'Trim';
+    font-display: swap;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 300;
+    src: url('/assets/fonts/Trim-Light.woff2') format('woff2'),
+        url('/assets/fonts/Trim-Light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Trim';
+    font-display: swap;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 400;
+    src: url('/assets/fonts/Trim-Regular.woff2') format('woff2'),
+        url('/assets/fonts/Trim-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'IBM Plex Sans';
+    font-display: swap;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 300;
+    src: url('/assets/fonts/IBMPlexSans-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'IBM Plex Sans';
+    font-display: swap;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 400;
+    src: url('/assets/fonts/IBMPlexSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'IBM Plex Sans';
+    font-display: swap;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 500;
+    src: url('/assets/fonts/IBMPlexSans-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'IBM Plex Sans';
+    font-display: swap;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 600;
+    src: url('/assets/fonts/IBMPlexSans-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'IBM Plex Sans';
+    font-display: swap;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 700;
+    src: url('/assets/fonts/IBMPlexSans-Bold.ttf') format('truetype');
+}

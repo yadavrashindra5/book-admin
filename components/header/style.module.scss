@@ -1,0 +1,10 @@
+@import "../../styles/theme";
+.header {
+  background-color: $dark_brown;
+  color: $white;
+  text-align: center;
+  padding: 10px 0;
+  position: sticky;
+  font-size: 20px;
+  font-weight: 700;
+}

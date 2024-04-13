@@ -1,0 +1,11 @@
+@import "../../styles/theme";
+
+.middleSection {
+  display: flex;
+  height: calc(100vh - 58px);
+}
+
+.middleSection > div:last-child {
+  border: 1px solid red;
+  width: 100%;
+}

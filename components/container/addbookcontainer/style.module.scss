@@ -1,0 +1,85 @@
+@import "../../../styles/theme";
+
+.container {
+  height: 100%;
+  background-color: #f7fafc;
+  padding: 20px 20px;
+}
+
+.name_info {
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+  color: rgb(141 12 173);
+}
+.name {
+  padding: 5px 10px;
+  font-size: 20px;
+  border: 2px solid black;
+}
+
+//content container
+.content_container {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  margin-top: 20px;
+  color: rgb(141 12 173);
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    row-gap: 5px;
+    border: 2px solid rebeccapurple;
+    padding: 10px;
+    box-shadow: 3px 2px 10px #ccc;
+    & > textarea {
+      height: 150px;
+      resize: none;
+      padding: 5px 10px;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      background-color: #f8f8f8;
+      font-size: 16px;
+    }
+  }
+}
+
+//toggle container
+
+.toggle_container {
+  display: flex;
+  border: 1px solid red;
+  align-items: center;
+  column-gap: 20px;
+  font-size: 20px;
+  color: rgb(141 12 173);
+  margin-top: 10px;
+  & > div {
+    display: flex;
+    column-gap: 5px;
+    padding: 10px;
+  }
+  & > button {
+    padding: 5px 15px;
+    color: rgb(141 12 173);
+    font-size: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 1000ms, color 1000ms;
+    border: 1px solid rgb(141 12 173);
+    &:hover {
+      background-color: #d889ed;
+      color: white;
+    }
+  }
+}
+
+.slug {
+  padding: 5px 10px;
+  font-size: 20px;
+  border: 2px solid black;
+}

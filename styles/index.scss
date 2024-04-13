@@ -1,0 +1,9 @@
+@import "base";
+@import "theme";
+@import "fonts";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@400;500;600&display=swap");
+* {
+  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
