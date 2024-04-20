@@ -1,5 +1,7 @@
+import AddCategoryContainer from "@/components/container/addcategorycontainer";
+
 const AddCategories = () => {
-  return <div>Add Categories</div>;
+  return <AddCategoryContainer />;
 };
 
 export default AddCategories;

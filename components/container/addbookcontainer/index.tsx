@@ -1,4 +1,4 @@
-import { SyntheticEvent, useState } from "react";
+import { SyntheticEvent, useEffect, useState } from "react";
 import styles from "./style.module.scss";
 
 interface BookType {
@@ -10,6 +10,13 @@ interface BookType {
   evergreen: boolean;
   latest: boolean;
   slug?: string;
+  author?: string;
+}
+
+interface AuthorType {
+  name: string;
+  id: string;
+  image: string;
 }
 
 const AddBookContainer = () => {
@@ -22,7 +29,11 @@ const AddBookContainer = () => {
     evergreen: false,
     latest: false,
     slug: "",
+    author: "",
   });
+
+  const [author, SetAuthor] = useState<AuthorType[]>([]);
+
   const onChangeHandler = (e: SyntheticEvent) => {
     if (e.target instanceof HTMLInputElement && e.target.id === "name") {
       setBookData({ ...bookData, name: e.target.value });
@@ -59,18 +70,37 @@ const AddBookContainer = () => {
       setBookData({ ...bookData, slug: slug });
     }
   };
+
   const saveData = (e: SyntheticEvent) => {
-    const addPost = fetch("http://localhost:9090/book", {
-      method: "POST",
-      body: JSON.stringify(bookData),
-      headers:{
-        "Content-Type":"application/json"
-      }
-    })
-      .then((response) => response.json())
-      .then((data) => console.log(data))
-      .catch((err) => console.log(err));
+    // const addPost = fetch("http://localhost:9090/book", {
+    //   method: "POST",
+    //   body: JSON.stringify(bookData),
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    // })
+    //   .then((response) => response.json())
+    //   .then((data) => console.log(data))
+    //   .catch((err) => console.log(err));
   };
+
+  //fetching the author data
+  const fetchAuthor = async () => {
+    const response = await fetch("http://localhost:9090/author");
+    const data = await response.json();
+    SetAuthor(data);
+  };
+
+  useEffect(() => {
+    fetchAuthor();
+  }, []);
+
+  const onSelectChangeHandler = (e: SyntheticEvent) => {
+    if (e.target instanceof HTMLSelectElement) {
+      setBookData({ ...bookData, author: e.target.value });
+    }
+  };
+
   return (
     <main className={styles.container}>
       <section className={styles.author}>
@@ -85,6 +115,16 @@ const AddBookContainer = () => {
             className={styles.name}
             onChange={(e) => onChangeHandler(e)}
           />
+        </div>
+        <div className={styles.custom_select}>
+          <select onChange={(e) => onSelectChangeHandler(e)}>
+            {author &&
+              author.map((author) => (
+                <option key={author.id} value={author.id}>
+                  {author.name}
+                </option>
+              ))}
+          </select>
         </div>
       </section>
       <section className={styles.content_container}>

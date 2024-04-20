@@ -1,0 +1,44 @@
+@import "../../../styles/theme";
+
+.container {
+  height: 100%;
+  background-color: #f7fafc;
+  padding: 20px 20px;
+}
+
+.name_info {
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+  color: rgb(141 12 173);
+}
+.name {
+  padding: 5px 10px;
+  font-size: 20px;
+  border: 2px solid black;
+}
+
+//toggle container
+
+.toggle_container {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  font-size: 20px;
+  color: rgb(141 12 173);
+  margin-top: 10px;
+  & > button {
+    padding: 5px 15px;
+    color: rgb(141 12 173);
+    font-size: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 1000ms, color 1000ms;
+    border: 1px solid rgb(141 12 173);
+    &:hover {
+      background-color: #d889ed;
+      color: white;
+    }
+  }
+}

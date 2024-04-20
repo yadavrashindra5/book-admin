@@ -5,7 +5,7 @@ import styles from "./style.module.scss";
 const Layout = ({ children }: any) => {
   console.log(children);
   return (
-    <div>
+    <div >
       <Header />
       <section className={styles.middleSection}>
         <SideBar />
